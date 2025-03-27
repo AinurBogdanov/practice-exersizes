@@ -8,15 +8,11 @@
   <body>
     <button
       onclick=" 
-      randomNum = Math.random();
-      if (randomNum < 0.5) {
-        result = 'heads';
-        alert(`coin droped ${result} you win`)
-      } else {
-        result = 'tails';
-        alert(`coin droped ${result} don't worry you can try again`)      
-      }
-
+       randomNum = Math.random();   
+        randomNum < 0.5  ? result = 'heads' : result = 'tails'
+            randomNum < 0.5
+            ? alert(`coin droped ${result} you win`)
+            : alert(`coin droped ${result} don't worry you can try again`)               
       "
     >
       heads
@@ -24,14 +20,11 @@
     <button
       onclick=" 
      randomNum = Math.random();
-      if (randomNum < 0.5) {
-        result = 'heads';
-        alert(`coin droped ${result} don't worry you can try again`)      
-      } else {
-        result = 'tails';
-        alert(`coin droped ${result} you win`)
-      }
-
+      randomNum < 0.5 ? result = 'heads' : result = 'tails';
+    
+      randomNum < 0.5
+      ?alert(`coin droped ${result} don't worry you can try again`)
+      :alert(`coin droped ${result} you win`)
     "
     >
       tails
