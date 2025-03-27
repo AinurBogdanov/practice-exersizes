@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const time = 5;
+      // const massage = "mate";
+      // if (time >= 6 && time <= 12) {
+      //   console.log(`good morning ${massage}`);
+      // } else if (time >= 13 && time <= 17) {
+      //   console.log(`good afternoon ${massage}`);
+      // } else {
+      //   console.log(`good night ${massage}`);
+      // }
+
+      const age = Math.floor(Math.random() * 100) + 1;
+      const holidayGenerator = Math.random();
+      let isHoliday = "";
+      if (holidayGenerator < 0.5) {
+        isHoliday = true;
+        console.log("it is a holiday");
+      } else {
+        isHoliday = false;
+        console.log("it is not a holiday");
+      }
+
+      if (age <= 6 && isHoliday === false) {
+        console.log(`${age} Y.O child has a right for discunt`);
+      } else if (age > 6 && age < 65 && isHoliday === false) {
+        console.log(
+          `${age} Y.O has no rights for discunt becase of the discount age`
+        );
+      } else if (isHoliday === false) {
+        console.log(`${age} Y.O has a right for discunt`);
+      } else
+        console.log(
+          `${age} Y.O has no right for discount becouse today is a holiday`
+        );
+
+      //         const age = Math.floor(Math.random() * 100) + 1;
+
+      // const holidayGenerator = Math.random();
+
+      // const isHoliday = holidayGenerator < 0.5;
+
+      // console.log(
+      //   holidayGenerator < 0.5 ? "it is a holiday" : "it is not a holiday"
+      // );
+
+      // const massage =
+      //   age <= 6 && !isHoliday
+      //     ? `${age} Y.O child has a right for discunt`
+      //     : age > 6 && age < 65 && !isHoliday
+      //     ? `${age} Y.O has no rights for discunt becase of the discount age`
+      //     : !isHoliday
+      //     ? `${age} Y.O has a right for discunt`
+      //     : `${age} Y.O has no right for discount becouse today is a holiday`;
+      // console.log(massage);
+    </script>
+  </body>
+</html>

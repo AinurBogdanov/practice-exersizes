@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <button
+      onclick=" 
+      randomNum = Math.random();
+      if (randomNum < 0.5) {
+        result = 'heads';
+        alert(`coin droped ${result} you win`)
+      } else {
+        result = 'tails';
+        alert(`coin droped ${result} don't worry you can try again`)      
+      }
+
+      "
+    >
+      heads
+    </button>
+    <button
+      onclick=" 
+     randomNum = Math.random();
+      if (randomNum < 0.5) {
+        result = 'heads';
+        alert(`coin droped ${result} don't worry you can try again`)      
+      } else {
+        result = 'tails';
+        alert(`coin droped ${result} you win`)
+      }
+
+    "
+    >
+      tails
+    </button>
+
+    <script></script>
+  </body>
+</html>
