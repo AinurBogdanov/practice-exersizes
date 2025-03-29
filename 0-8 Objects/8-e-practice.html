@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // basketball = {
+      //   "delivary-days": 15,
+      //   price: 2000,
+      //   color: "orange",
+      //   name: "bascket ball",
+      // };
+      // footballBall = {
+      //   "delivary-days": 20,
+      //   price: 2000,
+      //   color: "white",
+      //   name: "foottball Ball",
+      // };
+      // vallayBall = {
+      //   ["delivary-days"]: "optional",
+      //   price: 20650,
+      //   color: "green",
+      //   name: "valley ball",
+      // };
+
+      // function comperePrice(product1, product2) {
+      //   product1.price > product2.price
+      //     ? console.log(`${product1.name} is more expensive`)
+      //     : product1.price === product2.price
+      //     ? console.log("The products are equal")
+      //     : console.log(`${product2.name} is more expensive`);
+      // }
+      // comperePrice(basketball, vallayBall);
+      lada9 = {
+        ["color"]: "gray",
+        price: 200,
+        year: 2001,
+      };
+      lada6 = {
+        ["color"]: "green",
+        price: 200,
+        year: 1960,
+      };
+
+      function isAreSame(product1, product2) {
+        if (
+          product1.price === product2.price &&
+          product1["color"] === product2["color"]
+        ) {
+          console.log("cars has the same color and price");
+        } else if (product1.price === product2.price) {
+          console.log("products have the same price");
+        } else if (product1["color"] === product2["color"]) {
+          console.log("products have the same color");
+        } else {
+          console.log("products are comeplitely different");
+        }
+      }
+      isAreSame(lada9, lada6);
+    </script>
+  </body>
+</html>

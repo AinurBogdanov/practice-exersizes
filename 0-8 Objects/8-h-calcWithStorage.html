@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions</title>
+  </head>
+  <body>
+    <button
+      onclick="
+   console.log(result);
+  "
+    >
+      show
+    </button>
+
+    <button
+      onclick="
+    convertLenght(100, 'km','km')
+    "
+    >
+      calculate
+    </button>
+    <button
+      onclick="
+    result = 'value was reset';
+    localStorage.setItem('result', JSON.stringify(result));    
+    "
+    >
+      reset
+    </button>
+
+    <script>
+      // UPDATE
+      let result = JSON.parse(localStorage.getItem("result")) || "no value yet";
+
+      function convertLenght(lenght, from, to) {
+        if (from === "km" && to === "m") {
+          result = `${lenght / 1.6} Miles`;
+        } else if (from === "m" && to === "km") {
+          result = `${lenght * 1.6} Killometrs`;
+        } else if (from === "km" && to === "km") {
+          result = `${lenght * 1} Killometrs`;
+        } else if (from === "m" && to === "m") {
+          result = `${lenght * 1} Miles`;
+        } else if (from === "km" && to === "ft") {
+          result = lenght * 3281;
+        } else if (from === "ft" && to === "km") {
+          result = lenght / 3281;
+        } else if (from === "m" && to === "ft") {
+          result = lenght * 5280;
+        } else if (from === "ft" && to === "m") {
+          result = lenght / 5280;
+        } else if (to !== "km" && to !== "m" && to !== "ft") {
+          console.log(`${to} invalid propety value`);
+        } else if (from !== "km" && from !== "m" && from !== "ft") {
+          console.log(`${from} invalid propety value`);
+        }
+
+        localStorage.setItem("result", JSON.stringify(result));
+      }
+    </script>
+  </body>
+</html>

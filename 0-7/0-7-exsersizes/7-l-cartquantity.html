@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart update</title>
+  </head>
+  <body>
+    <button
+      onclick="
+  console.log(`Cart quantity: ${cartQuantity}`);
+  "
+    >
+      Show quantity
+    </button>
+    <button
+      onclick="
+      updateCartQuan (1);
+"
+    >
+      Add to cart
+    </button>
+
+    <button
+      onclick="
+      updateCartQuan (2);
+   "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="
+      updateCartQuan (3);
+   "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+     updateCartQuan (4);
+   "
+    >
+      +4
+    </button>
+    <button
+      onclick="
+      updateCartQuan (5);
+   "
+    >
+      +5
+    </button>
+    <button
+      onclick="
+ cartQuantity = 0;
+ console.log('cart was reset.');
+ console.log(`Cart quantity: ${cartQuantity}`);
+ "
+    >
+      Reset Cart
+    </button>
+    <div>
+      <button
+        onclick="
+      updateCartQuan (- 1);
+  "
+      >
+        decreas by one
+      </button>
+      <button
+        onclick="
+      updateCartQuan (- 2);
+  "
+      >
+        -2
+      </button>
+      <button
+        onclick="
+      updateCartQuan ( - 3);
+  "
+      >
+        -3
+      </button>
+    </div>
+
+    <script>
+      let cartQuantity = 0;
+
+      function updateCartQuan(num) {
+        if (cartQuantity + num > 20) {
+          alert(
+            `you can not add more items than 20 in your cart. \n Curent quantity is: ${cartQuantity}`
+          );
+          return;
+        }
+        if (cartQuantity + num < 0) {
+          alert(
+            `not enough items in the cart curent quantity is ${cartQuantity}:`
+          );
+          return;
+        }
+        if (cartQuantity + num >= 0 && cartQuantity + num <= 20) {
+          cartQuantity = cartQuantity + num;
+        }
+        console.log(cartQuantity);
+      }
+      // alert(`curent cart quantity is  ${cartquantity}`)
+      console.log(`Cart quantity: ${cartQuantity}`);
+    </script>
+  </body>
+</html>
