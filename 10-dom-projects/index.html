@@ -4,6 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom projects</title>
+    <style>
+        body {
+        font-family: Arial;
+      }
+
+      .subscribe-button {
+        border:none;
+        background-color:black;
+        color:white;
+        padding: 10px 20px;
+        border-radius:20px;
+        font:bold;
+        cursor:pointer;
+        margin-bottom:30px;
+      }
+      .is-subscribed {
+        background-color: rgb(241, 241, 241);
+        color:black;
+      }
+      .cost-input {
+        font-size:15px;
+        padding: 10px;
+        border-radius:3px;
+      }
+      .calculate-button {
+        background-color: green;
+        color:white;
+        border:none;
+        font-size:15px;
+        padding: 12px 15px;
+        cursor: pointer;
+
+      }
+      /* https://supersimple.dev/projects/rock-paper-scissors/  */
+    </style>
   </head>
   <body>
     <p>Youtube Subscribe Button</p>
@@ -11,18 +46,19 @@
       onclick="
       subscribe();
     "
-      class="js-subscribe-button"
+      class="js-subscribe-button subscribe-button"
     >
       Subscribe
     </button>
 
     <p>Amazon Shipping Calculator</p>
-    <input class="js-cost-input" type="text" placeholder="Cost of order" 
+    <input class="js-cost-input cost-input" t ype="text" placeholder="Cost of order" 
     onkeydown="
       handleCostKeydown(event)
     "
     />
     <button
+    class="calculate-button"
       onclick="
     calculateTotal();
     "
@@ -55,8 +91,10 @@
 
         if (buttonElement.innerText === "Subscribe") {
           buttonElement.innerText = "Subscribed";
+          buttonElement.classList.add('is-subscribed');
         } else {
           buttonElement.innerText = "Subscribe";
+          buttonElement.classList.remove("is-subscribed")
         }
       }
     </script>

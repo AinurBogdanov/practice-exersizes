@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .amazon-btn {
+      background-color: rgba(255, 216, 20, 0.774);
+      border:none;
+      padding:8px 70px;
+      font-family: Arial;
+      font-size: 20px;
+      border-radius:20px;
+    }
+    .uber-btn-one {
+      background-color: rgb(5, 5, 5);
+      color:white;
+      margin: 0 10px;
+      padding:12px 22px;
+      border-radius: 8px;
+      font-weight:bold;
+    }
+    .uber-btn-two {
+      background-color: rgb(230, 230, 230);
+      border:transparent;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <button class="amazon-btn js-button">Add to Cart</button>
+  <button class="uber-btn-one">Request now</button>
+  <button class="uber-btn-two">Schedule for later</button>
+  <script>
+    console.log(document.querySelector(".amazon-btn").classList.contains('js-button'))
+
+  </script>
+</body>
+</html>

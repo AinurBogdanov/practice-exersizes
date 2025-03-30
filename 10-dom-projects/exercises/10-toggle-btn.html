@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn-gaming,
+    .btn-music,
+    .btn-tech {
+      color:white;
+      padding: 10px 12px;
+      background-color: grey;
+      border-radius: 4px;
+      cursor:pointer;
+      border: none;
+    }
+    .btn-toggled-on {
+      background-color:black;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn-gaming"
+  onclick="
+  turnOnButton ('btn-gaming', 'btn-music', 'btn-tech')
+  "
+  >Gaming</button>
+
+  <button class="btn-music"
+  onclick="
+  turnOnButton ('btn-music', 'btn-gaming', 'btn-tech')
+  "
+  >Music</button>
+  
+  <button class="btn-tech"
+  onclick="
+  turnOnButton ( 'btn-tech', 'btn-gaming', 'btn-music')
+  "
+  >Tech</button>
+
+  <script>
+    // function addClass(parametr) {
+    //   if (document.querySelector(`.${parametr}`).classList.contains('btn-toggled-on') ) {
+    //     document.querySelector(`.${parametr}`).classList.remove("btn-toggled-on");
+    //   } else {
+    //     document.querySelector(`.${parametr}`).classList.add("btn-toggled-on");
+    //   }
+    //   console.log(parametr)
+    // }
+    function turnOnButton (mainBtn, otherBtnOne, otherBtnTwo) { 
+      if (!document.querySelector(`.${mainBtn}`)
+      .classList.contains('btn-toggled-on') && !document.querySelector(`.${otherBtnOne}`)
+      .classList.contains('btn-toggled-on') && !document.querySelector(`.${otherBtnTwo}`)
+      .classList.contains('btn-toggled-on')) {
+        document.querySelector(`.${mainBtn}`).classList.add('btn-toggled-on');
+      } else if (document.querySelector(`.${mainBtn}`)
+      .classList.contains('btn-toggled-on') && !document.querySelector(`.${otherBtnOne}`)
+      .classList.contains('btn-toggled-on') && !document.querySelector(`.${otherBtnTwo}`)
+      .classList.contains('btn-toggled-on')) {
+        document.querySelector(`.${mainBtn}`).classList.remove("btn-toggled-on");
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input class="js-input" type="text"
+  onkeydown="
+  sayNameOnEnter()
+  "
+  >
+  <p></p>
+  <button
+  onclick="
+  sayMyName();
+  "
+  >Submit</button>
+  <script>
+    function sayMyName() {
+      let text = document.querySelector('.js-input').value;
+      document.querySelector('p')
+      .innerHTML = `your name is: ${text}`
+    };
+    function sayNameOnEnter() {
+      if (event.key === 'Enter') {
+    sayMyName();
+  }
+    }
+ 
+  </script>
+</body>
+</html>

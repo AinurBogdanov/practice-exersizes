@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn-gaming,
+    .btn-music,
+    .btn-tech {
+      color:white;
+      padding: 10px 12px;
+      background-color: grey;
+      border-radius: 4px;
+      cursor:pointer;
+      border: none;
+    }
+    .is-toggled {
+      background-color:black;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn-gaming"
+  onclick="
+  toggleButton('btn-gaming')
+  "
+  >Gaming</button>
+
+  <button class="btn-music"
+  onclick="
+  toggleButton('btn-music')
+  "
+  >Music</button>
+  
+  <button class="btn-tech"
+  onclick="
+   toggleButton('btn-tech')
+  "
+  >Tech</button>
+
+  <script>
+        function toggleButton(selector) {
+      const button = document.querySelector(`.${selector}`);
+      if (!button.classList.contains('is-toggled')) {
+
+        // Before turning this button ON, check if there's
+        // already a button that's turned ON and turn it OFF.
+        turnOffPreviousButton();
+
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    }
+
+    function turnOffPreviousButton() {
+      const previousButton = document.querySelector('.is-toggled');
+      if (previousButton) {
+        previousButton.classList.remove('is-toggled');
+      }
+    }
+  </script>
+</body>
+</html>
