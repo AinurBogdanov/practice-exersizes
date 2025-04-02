@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercises</title>
+</head>
+<body>
+
+
+<script> 
+
+  // const cars = [
+  //   lada = {color:'red', year:2000,name:'lada'}, 
+  //   mazda = {color:'white', year:2020,name:'mazda'}, 
+  //   shevrolet = {color:'black', year:2015,name:'shevrolet'} 
+  //   ]
+    
+  //   cars[3] = bmw = {color:'gray', year:2012,name:'bmv'}
+  // cars.push(volvo = {color:'blue', year:2020,name:'volvo'})
+
+  // for (let i = 0; i <= 4; i++) {
+  //   const car = cars[i];
+  //   car.version = 'new'
+    
+  // }
+
+  
+  myArray = ['hello', 123, 'good job!', true]
+  
+  
+  function getLastValue (array) {
+      lastIndex = array.length - 1;
+      return array[lastIndex];
+    }
+    
+
+  function arraySwap(array) {
+    array[0] = array[array.length - 1];
+    array[array.length - 1] = array[0];
+    
+    return array
+  }
+  
+  console.log(arraySwap(myArray));  
+  
+  
+
+</script>
+</body>
+</html>

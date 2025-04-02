@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+    myArray = [1, 1, 1, 1]
+    hisArray = [1, 2, 3, 4]
+
+    // function addNum(array, num) {
+    //   for(let i = 0; i < array.length;i++) {
+    //     array[i] = array[i] + num;
+    //   }
+    //   return array 
+    // }
+    
+    // console.log(addNum(myArray, 1))
+
+    let newArray = []
+
+    function sumArrays(array1, array2) {
+      for(let i = 0; i < array2.length; i++) {
+        newArray[i] = array1[i] + array2[i]
+      }
+      return console.log(newArray)
+    }
+    sumArrays(myArray, hisArray)
+
+
+    
+
+
+  </script>
+</body>
+</html>

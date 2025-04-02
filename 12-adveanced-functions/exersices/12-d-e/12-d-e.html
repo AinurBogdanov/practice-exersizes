@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button</title>
+</head>
+<body>
+  <button 
+  onclick="
+  changeButton();
+  "
+  class="js-finished">finished</button>
+
+  <div>
+    <button
+    onclick="
+    addedCart();
+    "
+    >Add to cart</button>
+
+    <p class="js-added"></p>
+  </div>
+
+  <script>  
+
+        // function changeButton() {
+        //   document.querySelector(".js-finished")
+        //   .innerHTML = 'loading...';
+
+        // setTimeout(function(){
+        //   document.querySelector(".js-finished")
+        // .innerHTML = 'Finished !'}, 1000);
+        // } 
+        
+        
+    const addMassage = function addedHTML() {
+      document.querySelector('.js-added')
+      .innerHTML = 'added'
+    };
+
+    const removeMassage = function removeHTML() {
+       document.querySelector('.js-added')
+      .innerHTML = '';
+    }
+    
+    function addedCart() {
+      addMassage();
+     setTimeout(removeMassage, 2000);
+    }
+    
+
+
+  </script>
+</body>
+</html>

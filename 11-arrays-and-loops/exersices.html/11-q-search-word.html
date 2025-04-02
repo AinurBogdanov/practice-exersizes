@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    colors = ['red', 'green', 'yellow', 'blue', 'gray']
+
+    function findIndex (array, word) {
+      index = -1;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          index = i;
+        }
+      }
+      return index
+    }
+
+    console.log(findIndex(colors,'yellow'))
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add</title>
+</head>
+<body>
+  <button 
+  onclick="
+  changeButton();
+  "
+  class="js-finished">finished</button>
+  <script>
+    // const add = function() {
+    //   console.log('2 + 3')
+    // };
+  
+
+    // const runTwice = function(fun) {
+    //   fun();
+    //   fun();
+    //   fun();
+    //   fun();
+    //   fun();
+    // };
+
+    // // runTwice(add);
+    
+    
+    
+    function changeButton() {
+    setTimeout(function changeHTML(){
+      document.querySelector(".js-finished")
+    .innerHTML = 'Finished !'}, 2000);
+    }
+    
+
+
+
+  </script>
+</body>
+</html>

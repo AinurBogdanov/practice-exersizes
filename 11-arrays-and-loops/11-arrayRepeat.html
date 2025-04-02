@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice makes progress</title>
+</head>
+<body>
+  <script>
+
+    // numsArray = [10, 20, 30, 40, 50, 50];
+    // integersArray = [1, 2, 3, 4, 5,]
+    // stringsArray = ['school','car', 'dird', 'house'];
+    // fruitsArray = ['apple', 'orange', 'banana'];
+    // mixedNumsArray = [1, 2, 100, -99, -0.6, -139,];
+    // negativeNums = [-1, -190, -15, -8]
+
+  // function addOne(array) {
+  //   let newArray = [];
+
+  //   for(i = 0; i < array.length; i++) {
+  //     newArray[i] = array[i] + 1; 
+  //   }
+  //   return newArray
+  // }
+
+
+
+
+// console.log(addOne(nums))
+
+    // function addNum(array, num) {
+    //   for (let i = 0; i < array.length; i++) {
+    //     array[i] = array[i] + num;
+    //   }
+    //   return array
+    // }
+    // console.log(addNum(nums,100))
+
+      // function addArray(array1, array2) {
+      //   for (let i = 0; i < array1.length; i++) {
+      //     array1[i] = array1[i] + array2[i];
+      //   }
+      //   return array1
+      // }
+
+      // console.log(addArray(nums,integers))
+
+  // function countPositiveNumbers(array) {
+  //   let result = 0;
+  //   for (let i = 0; i < array.length; i++ ) {
+  //     if (array[i] > 0) {
+  //       result++
+  //     }
+  //   }
+  //   return result
+  // }
+ 
+  // console.log(countPositiveNumbers(mixedNums))
+
+
+
+
+
+// MIn Max
+
+    // function minMax(nums) {
+    //   let result = {
+    //     min:null,
+    //     max:null
+    //   }   
+
+    //   for (let i = 0; i < nums.length; i++) {
+    //     number = nums[i];
+
+    //     if (number < result.min || result.min === null) {
+    //       result.min = number;
+    //     } 
+    //     if (number > result.max || result.max === null ) {
+    //       result.max = number;
+    //     } 
+    //   }
+    //   return result;
+    // }
+    // console.log(minMax([2]))
+
+
+
+
+// count Words
+
+    // function countWords(words) {
+    //   let result = {}; //initialaze object for storage
+
+    //   for (let i = 0; i < words.length; i++) {
+    //     let word = words[i]; //деляю кодд более читабельным
+
+    //     if (!result[word]) {  //если такое слово не получаеться найти добавляем
+    //       result[word] = 1
+    //     } else {                  //если получеться +1 
+    //       result[word] += 1;
+    //     } 
+
+    //   }
+      
+    //   if (words.length === 0) {
+    //     result = 'no words found'
+    //   }
+
+    //   return result;
+
+    // }
+
+    // console.log(countWords([]))
+
+
+
+
+//   find search
+
+  //   let strings = ['car','bull', 'jack'] 
+  //   console.log(strings)
+    
+
+
+  //   let result = -1;
+    
+  //   for (let i = 0; i < strings.length; i++) {
+  //     let string = strings[i];
+  //    if (string === 'search') {
+  //        result = i
+  //      }
+  //   }
+  //   console.log(result)
+
+
+    // let strings = ['search', 'car','bull', 'jack','search'] 
+
+    // let result = -1;
+    
+    // for (let i = 0; i < strings.length; i++) {
+    //   let string = strings[i];
+
+    //    if (string === 'search') {
+    //       result = i
+    //       break;
+    //     }
+    // }
+    // console.log(result)
+
+
+
+//FIND INDEX
+
+  // fruitsArray = ['apple', 'orange', 'banana', 'orange','dragon fruit', 'bluebarry'];
+
+  //   function findIndex(array, word) {
+  //     for(let i = 0; i < array.length; i++) {
+  //       if (array[i] === word) {
+  //         return i 
+  //       }
+  //     }
+  //     return -1;
+  //   } 
+
+  //   console.log(findIndex(fruitsArray, 'orange'))
+
+// REMOVE EGG
+    // foods = ['egg', 'ham', 'egg', 'ham', 'apple','egg',];
+
+    // function removeEgg(foods) {
+    // let reversedFoods = foods.reverse(); //исходный массив также изменяеться 
+
+    //   result = [];
+    //   count = 0;
+      
+    //   for (let i = 0; i < foods.length; i++) {
+    //     if (reversedFoods[i] === 'egg' && count < 2) {
+    //       count++;
+    //       continue;
+    //     }
+    //       result.push(reversedFoods[i])
+    //   }
+
+    //   return result.reverse();
+    // }
+
+    // console.log(removeEgg(foods))
+    // console.log(foods) //подтверждение тому что он изменился 
+
+      //делаем так чтобы исходный массив не менялся 
+
+        // function removeEgg(foods) {
+        // let reversedFoods = foods.slice().reverse();
+
+        //   result = [];
+        //   count = 0;
+          
+        //   for (let i = 0; i < foods.length; i++) {
+        //     if (reversedFoods[i] === 'egg' && count < 2) {
+        //       count++;
+        //       continue;
+        //     }
+        //       result.push(reversedFoods[i])
+        //   }
+
+        //   return result.reverse();
+        // }
+
+        // foods = ['egg', 'ham', 'egg', 'ham', 'apple','egg',];
+
+        // console.log(removeEgg(foods))
+        // console.log(foods) 
+
+
+// Fizz Buzz problem 
+     
+    // for (let num = 1; num <= 20; num++) {
+    //   if (num %3 === 0 && num%5 === 0 ){
+    //     console.log('FizzBuzz') 
+    //   } else if (num %5 === 0) {
+    //     console.log('Buzz')
+    //   } else if (num %3 === 0) {
+    //     console.log('Fizz')
+    //   } else {
+    //     console.log(num)
+    //   }
+    // }
+
+// UNIQUE WORDS
+    // fruits = ['grape', 'banana', 'grape', 'peir', 'apple', 'apple'];
+
+    // function unique(array) {
+    //   result = [];
+    //   for(i = 0;i < array.length; i++) {
+    //     uniqueWord = array[i];
+    //     if (!result.includes(array[i])) {
+    //       result.push(array[i])
+    //     }
+    //   }
+    //   return result
+    // }
+
+    // console.log(unique(fruits))
+
+
+// UNIQUE WORDS TWO 
+
+    // function findIndex(array,word) {
+    //       for(let i = 0; i < array.length; i++) {
+    //         if(array[i] === word) {
+    //           return i;
+    //         }
+    //       }
+
+    //       return -1;
+    //     }
+
+    // function unique(array) {
+    //   result = [];
+    
+    //   for(let i = 0; i < array.length; i++) {
+    //    let uniqueWord = array[i];
+
+    //     if (findIndex(result, uniqueWord) === -1) {
+    //       result.push(uniqueWord) 
+    //     }
+    //   }
+
+    //   return result;
+    // }
+
+    // console.log(unique(fruits))
+
+
+  </script>
+</body>
+</html>

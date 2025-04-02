@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+<body>
+  <script>
+    // let array = [];
+
+    // console.log(array[0])
+
+
+    function countWords(words) {
+      let result = {}; //initialaze object for storage
+
+      for (let i = 0; i < words.length; i++) {
+        let word = words[i]; //деляю кодд более читабельным
+
+        if (!result[word]) {  //если такое слово не получаеться найти добавляем
+          result[word] = 1
+        } else {                  //если получеться +1 
+          result[word] += 1;
+        } 
+
+      }
+      
+      if (words.length === 0) {
+        result = 'no words found'
+      }
+
+      return result;
+
+    }
+
+    console.log(countWords([]))
+
+    
+  </script>
+</body>
+</html>

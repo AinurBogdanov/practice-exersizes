@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>  
+    function findIndex (array, word) {
+      index = -1;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          index = i;
+        }
+      }
+      return index
+    }
+
+    notUnique = ['blue','red','black','black','blue','blue','unique' 
+    ]
+      
+      
+      function unique(array) {
+        const result = [];
+        
+        for(let i = 0; i < array.length; i++) {
+          word = array[i];
+          
+          if (findIndex (result, word) === -1)
+          result.push(word)
+        }
+        return result
+      }
+
+      // console.log(findIndex (notUnique, notUnique[4]))
+      console.log(unique(notUnique))
+
+
+  </script>
+</body>
+</html>
