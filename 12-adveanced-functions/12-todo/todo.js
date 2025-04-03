@@ -4,18 +4,15 @@ let todoList = JSON.parse(localStorage.getItem('TodoList')) || []; //где со
 function renderTodo() {
   let todoListHTML = ''; //нужно для сохранения html кода 
 
-  todoList.forEach(function(todoObject, index) {   
+  todoList.forEach((todoObject, index) => {   
     const {name, dueDate} = todoObject;
 
       const html = `
         <div class="todo-item">${name}</div>
         <div>${dueDate}</div>
         <button
-        class="del-btn"
-        onclick= "
-        todoList.splice(${index},1);
-        renderTodo();
-        ">del</button> 
+        class="del-btn js-del-btn"
+        >del</button> 
         `;
         todoListHTML += html;       //добавление html в переменную при помощи конкатанации
   })
@@ -24,7 +21,20 @@ function renderTodo() {
 
   document.querySelector('.js-todo-list')
   .innerHTML = todoListHTML;
-}
+
+
+   document.querySelectorAll('.js-del-btn')
+    .forEach((deleteButton, index) => {
+      deleteButton.addEventListener('click', () => {
+        todoList.splice(index,1);
+        renderTodo();
+      })
+    });
+    
+  }
+
+document.querySelector('.js-add-todo-button')
+.addEventListener('click',() => addTodo())
 
 
 

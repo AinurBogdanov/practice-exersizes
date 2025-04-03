@@ -13,7 +13,7 @@ let intervalId;
 
 function autoPlay() {
   if (!isAutoPlaing) {
-    intervalId = setInterval( function () {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     },1000)
@@ -24,6 +24,28 @@ function autoPlay() {
   }
   
 }
+
+document.querySelector('.js-rock-button')
+.addEventListener('click',() => playGame('rock'))
+
+document.querySelector('.js-paper-button')
+.addEventListener('click',() => playGame("paper"))
+
+document.querySelector('.js-scissors-button')
+.addEventListener('click',() => playGame("scissors"))
+
+
+document.body.addEventListener('keydown', (event) => {
+  if(event.key === 'r') {
+    playGame('rock')
+  } else if (event.key === 'p') {
+    playGame('paper') 
+  } else if (event.key === 's') {
+    playGame('scissors') 
+  }
+});
+  
+
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
@@ -46,12 +68,18 @@ function playGame(playerMove) {
     } else {
       result = "you lose";
     }
-  }
-  computerMove === "rock"
-    ? (result = "tie")
-    : computerMove === "paper"
-    ? (result = "you lose")
-    : (result = "you win");
+  } else if (playerMove === "rock") {
+    if (computerMove === "scissors") {
+      result = "you win";
+    } else if (computerMove === "rock") {
+      result = "tie";
+    } else {
+      result = "you lose";
+    }
+  };
+    
+  
+ 
 
   if (result === "you win") {
     score.wins += 1;

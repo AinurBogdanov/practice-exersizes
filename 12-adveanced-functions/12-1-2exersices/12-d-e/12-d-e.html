@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+</head>
+<body>
+<button class="js-finished">finished</button>
+
+<div>
+  <button
+  class="js-added-button"
+  >Add to cart</button>
+
+  <p class="js-added-paragrah"></p>
+</div>
+
+<div>
+    <button class="add-massage-button">Add</button>
+    <button class="remove-massage-button">remove</button>
+</div>
+<script>  
+//BUTTON FINISHED 
+
+
+// document.querySelector('.js-finished')
+// .addEventListener('click',
+// function changeButton() {
+//     const element = document.querySelector(".js-finished");
+//       element.innerHTML = 'loading...';
+
+//     setTimeout(() => element.innerHTML = 'Finished !', 1000);
+// })
+
+                
+//ADD  A MASSAGE
+
+
+// const element = document.querySelector('.js-added-paragrah')   
+// let timeOutId;
+
+// const addMassage = () => {
+//   element.innerHTML = 'added'
+//   };
+// const removeMassage = () => {
+//   element.innerHTML = '';
+//   };
+
+// document.querySelector(".js-added-button").addEventListener('click',() => {
+//   addMassage();
+//   clearTimeout(timeOutId);
+
+//   timeOutId = setTimeout(removeMassage, 2000);
+// }
+// )
+
+
+// POP UP   
+
+
+  // setInterval(() => {
+  //   if (document.title === "document") {
+  //     document.title = 'massage'
+  //   } else {
+  //     document.title = "document"
+  //   }
+  //  }, 1000)
+  
+
+// POP UP WITH COUNT
+
+// let massage = 2;
+
+// let interId;
+// displayPopup()
+// function displayPopup() {
+//   clearInterval(interId); //если при первом запуске равен undefined то ничего не изменит 
+    
+//   if (massage > 0) {
+//       interId = setInterval(() => {
+//     if (document.title === "App") {
+//       document.title = `(${massage}) new massages`
+//     } else {
+//       document.title = "App"
+//     }
+//     }, 1000)
+//   } else {
+//     clearInterval(interId);
+//     document.title = "App"
+//   }
+// }
+
+// document.querySelector('.add-massage-button').addEventListener('click',
+// () => { massage++;displayPopup(); console.log(massage);})
+// document.querySelector('.remove-massage-button').addEventListener('click',
+// () => { if (massage > 0) {massage--;}; displayPopup();console.log(massage)})
+
+</script>
+</body>
+</html>
