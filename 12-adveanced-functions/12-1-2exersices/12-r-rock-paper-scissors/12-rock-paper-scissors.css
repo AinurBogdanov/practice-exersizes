@@ -29,6 +29,10 @@ body {
   cursor: pointer;
 }
 
+.confirm-container {
+  margin-bottom:20px;
+}
+
 .result {
   font-size:20px;
   font-weight: bold;

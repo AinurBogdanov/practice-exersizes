@@ -10,12 +10,13 @@
       function convertToFahrenheit(celsius) {
         let fahrenheit = (celsius * 9) / 5 + 32;
         return fahrenheit;
-      }
+      };
+
       function convertToCelsius(fahrenheit) {
         let celsius;
         celsius = ((fahrenheit - 32) * 5) / 9;
         return celsius;
-      }
+      };
 
       function converttemperature(degrees, unit) {
         let result;
@@ -25,7 +26,8 @@
           result = `${Math.round(convertToCelsius(degree))} С`;
         }
         console.log(result);
-      }
+      };
+      
       converttemperature(0, "C");
     </script>
   </body>

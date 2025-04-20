@@ -13,6 +13,7 @@ let intervalId;
 
 const buttonAutoPlayingEl = document.querySelector('.js-auto-play-button');
 buttonAutoPlayingEl.addEventListener('click',autoPlay);
+
 document.body.addEventListener('keydown',(event) => {if (event.key === 'a') autoPlay()})
 function autoPlay() {
   if (!isAutoPlaying) {
@@ -47,27 +48,55 @@ document.body.addEventListener('keydown', (event) => {
     playGame('paper') 
   } else if (event.key === 's') {
     playGame('scissors') 
+  } else if (event.key === 'Backspace') {
+    showResetConfirmation()
   }
 });
 
-document.body.addEventListener('keydown', (event) => {
-  if (event.key === 'Backspace'){
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-  }});  
+  
+document.querySelector('.js-reset-button')
+  .addEventListener('click',() => {
+  
+   showResetConfirmation()
+})
+
+function showResetConfirmation() {
+  document.querySelector('.js-reset-confirmation')
+    .innerHTML = `
+      Are you sure you want to reset the score?
+      <button class="js-reset-confirm-yes reset-confirm-button">
+        Yes
+      </button>
+      <button class="js-reset-confirm-no reset-confirm-button">
+        No
+      </button>
+    `;
+
+    document.querySelector('.js-reset-confirm-yes')
+    .addEventListener('click', () => {
+      resetScore();
+      hideResetConfirmation();
+    });
+  
+  document.querySelector('.js-reset-confirm-no')
+    .addEventListener('click', () => {
+      hideResetConfirmation();
+    });
+}
 
 
+function hideResetConfirmation() {
+  document.querySelector('.js-reset-confirmation')
+    .innerHTML = '';
+}
 
-document.querySelector('.js-reset-button').addEventListener('click',() => {
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-  })
+function resetScore() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+}
 
 
 function playGame(playerMove) {
